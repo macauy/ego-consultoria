@@ -1,0 +1,22 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="egoGradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00DF76"/><stop offset="1" stop-color="#0072F1"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="28" fill="#00AEFF14"/>
+  <!-- aro exterior e interior -->
+  <circle cx="32" cy="32" r="16" stroke="url(#egoGradient)" stroke-width="3"/>
+  <circle cx="32" cy="32" r="6.5" stroke="url(#egoGradient)" stroke-width="3"/>
+  <!-- “dientes” (líneas cortas radiales) -->
+  <g stroke="url(#egoGradient)" stroke-width="3" stroke-linecap="round">
+    <line x1="32" y1="10" x2="32" y2="14"/>             <!-- 0° -->
+    <line x1="45.3" y1="14.7" x2="42.9" y2="17.1"/>      <!-- 45° -->
+    <line x1="54" y1="32" x2="50" y2="32"/>              <!-- 90° -->
+    <line x1="45.3" y1="49.3" x2="42.9" y2="46.9"/>      <!-- 135° -->
+    <line x1="32" y1="54" x2="32" y2="50"/>              <!-- 180° -->
+    <line x1="14.7" y1="49.3" x2="17.1" y2="46.9"/>      <!-- 225° -->
+    <line x1="10" y1="32" x2="14" y2="32"/>              <!-- 270° -->
+    <line x1="14.7" y1="14.7" x2="17.1" y2="17.1"/>      <!-- 315° -->
+  </g>
+</svg>

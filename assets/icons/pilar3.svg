@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="egoGradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00DF76"/><stop offset="1" stop-color="#0072F1"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="28" fill="#00AEFF14"/>
+  <!-- barras -->
+  <g stroke="url(#egoGradient)" stroke-width="3" stroke-linejoin="round">
+    <rect x="20" y="36" width="8" height="12" rx="2"/>
+    <rect x="30" y="30" width="8" height="18" rx="2"/>
+    <rect x="40" y="22" width="8" height="26" rx="2"/>
+  </g>
+  <!-- línea de tendencia con flecha -->
+  <path d="M18 40 C24 34, 30 30, 36 26 L38 25" stroke="url(#egoGradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M36.5 22 L42 24.5 L39.5 30" fill="none" stroke="url(#egoGradient)" stroke-width="3" stroke-linejoin="round"/>
+</svg>

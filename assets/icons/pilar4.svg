@@ -1,0 +1,18 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="egoGradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00DF76"/><stop offset="1" stop-color="#0072F1"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="28" fill="#00AEFF14"/>
+  <!-- cabezas -->
+  <g stroke="url(#egoGradient)" stroke-width="3" fill="none">
+    <circle cx="32" cy="24" r="6"/>
+    <circle cx="22" cy="28" r="4.5"/>
+    <circle cx="42" cy="28" r="4.5"/>
+    <!-- torsos -->
+    <path d="M24 44 C24 38, 28 34, 32 34 C36 34, 40 38, 40 44" stroke-linecap="round"/>
+    <path d="M15 44 C15 39, 18.5 36, 22 36" stroke-linecap="round"/>
+    <path d="M49 44 C49 39, 45.5 36, 42 36" stroke-linecap="round"/>
+  </g>
+</svg>

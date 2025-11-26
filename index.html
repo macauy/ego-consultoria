@@ -14,7 +14,7 @@
         </a>
 
         <nav id="navbar" class="nav" aria-label="Menu principal">
-          <div id="nav-panel" class="nav-panel" hidden>
+          <div id="nav-panel" class="nav-panel" hidden aria-hidden="true">
             <ul class="nav-list">
               <li><a href="#inicio">Inicio</a></li>
               <li><a href="#servicios">Servicios</a></li>
@@ -29,14 +29,14 @@
           <img src="./assets/icons/icon-menu.svg" alt="" aria-hidden="true" />
         </button>
 
-        <a class="btn btn-primary header-cta" href="#cta" hidden>Agendar Consulta</a>
+        <a class="btn btn-primary header-cta" href="#contacto" hidden>Agendar Consulta</a>
       </div>
     </header>
     <!-- Overlay -->
     <div class="nav-overlay" id="overlay" hidden></div>
     <main>
       <!-- HERO -->
-      <section class="hero" aria-labelledby="hero-title">
+      <section id="inicio" class="hero" aria-labelledby="hero-title">
         <div class="container hero-grid">
           <div class="hero-content">
             <h1 id="hero-title" class="title hero-title">
@@ -45,8 +45,8 @@
             </h1>
             <p class="subtitle">Te ayudo a resolver problemas operativos, potenciar equipos y lograr resultados medibles.</p>
             <div class="hero-cta">
-              <a class="btn btn-primary" href="#cta">Agendar Consulta</a>
-              <a class="btn btn-secondary" href="#cta">Ver Servicios</a>
+              <a class="btn btn-primary" href="#contacto">Agendar Consulta</a>
+              <a class="btn btn-secondary" href="#servicios">Ver Servicios</a>
             </div>
           </div>
           <div class="hero-image">
@@ -60,23 +60,22 @@
       </section>
 
       <section class="problemas section">
-        <div class="container">
+        <div class="container section-content">
           <h2 class="problemas-title">¿Te pasa esto en tu negocio?</h2>
           <div class="card-grid">
             <div class="card card--problemas">
               <div class="card-title card-title--problemas">
                 <div class="card-title-image">
-                  <img src="./assets/icons/problema1.png" alt="" />
+                  <img src="./assets/icons/problema1.png" alt="" loading="lazy" />
                 </div>
                 <h3>Altos Costos</h3>
               </div>
               <p>La operación consume más de lo esperado y no ves el retorno.</p>
             </div>
-
             <div class="card card--problemas">
               <div class="card-title card-title--problemas">
                 <div class="card-title-image">
-                  <img src="./assets/icons/problema2.png" alt="" />
+                  <img src="./assets/icons/problema2.png" alt="" loading="lazy" />
                 </div>
                 <h3>Procesos lentos</h3>
               </div>
@@ -85,7 +84,7 @@
             <div class="card card--problemas">
               <div class="card-title card-title--problemas">
                 <div class="card-title-image">
-                  <img src="./assets/icons/problema3.png" alt="" />
+                  <img src="./assets/icons/problema3.png" alt="" loading="lazy" />
                 </div>
                 <h3>Rotación alta</h3>
               </div>
@@ -94,54 +93,285 @@
             <div class="card card--problemas">
               <div class="card-title card-title--problemas">
                 <div class="card-title-image">
-                  <img src="./assets/icons/problema4.png" alt="" />
+                  <img src="./assets/icons/problema4.png" alt="" loading="lazy" />
                 </div>
                 <h3>Rentabilidad baja</h3>
               </div>
               <p>Las ganancias no acompañan al esfuerzo.</p>
             </div>
           </div>
-        </div>
-        <div class="container">
-          <div class="problemas-cta">
-            <h2 class="problemas-title">Transformemos estos problemas en resultados!</h2>
-            <a class="btn btn-primary" href="#cta">Empezar ahora</a>
+          <!-- </div>
+        <div class="container"> -->
+          <div class="cta problemas-cta">
+            <h3 class="problemas-title">Transformemos estos problemas en resultados!</h3>
+            <a class="btn btn-primary" href="#contacto">Empezar ahora</a>
           </div>
         </div>
       </section>
 
       <section id="servicios" class="servicios section">
-        <div class="container">
+        <div class="container section-content">
           <h2 class="title">Nuestros Servicios</h2>
+          <div class="card-grid">
+            <div class="card card--servicios">
+              <div class="card-title-image">
+                <img src="./assets/icons/servicios1.svg" alt="" loading="lazy" />
+              </div>
+              <h3>Procesos</h3>
+              <p>Estandarizamos y simplificamos tu operación para ahorrar tiempo y costos.</p>
+            </div>
+            <div class="card card--servicios">
+              <div class="card-title-image">
+                <img src="./assets/icons/servicios2.svg" alt="" loading="lazy" />
+              </div>
+              <h3>Desarrollo de equipos</h3>
+              <p>Liderazgo, motivación y rituales de trabajo para equipos comprometidos y eficientes.</p>
+            </div>
+            <div class="card card--servicios">
+              <div class="card-title-image">
+                <img src="./assets/icons/servicios3.svg" alt="" loading="lazy" />
+              </div>
+              <h3>Expansión y proyectos</h3>
+              <p>Acompañamiento para nuevas aperturas, franquicias y mejora de la logística.</p>
+            </div>
+            <div class="card card--servicios">
+              <div class="card-title-image">
+                <img src="./assets/icons/servicios4.svg" alt="" loading="lazy" />
+              </div>
+              <h3>Gestión de rentabilidad</h3>
+              <p>Métricas claras, control de costos y estrategias para crecer de forma sostenible.</p>
+            </div>
+          </div>
+          <div class="cta servicios-cta">
+            <a class="btn btn-secondary" href="#cta">Ver todos los servicios</a>
+          </div>
         </div>
       </section>
-      <!-- 
-      <section class="metodologia">
-        <h2>Así te ayudo a transformar tu negocio</h2>
-      </section>
-      <section id="testimonios" class="testimonios">
-        <h2>Casos de éxito y experiencias reales</h2>
-      </section>
-      <section id="contacto" class="contacto">
-        <h2>¿Listo para potenciar tu restaurante?</h2>
-      </section> -->
-    </main>
-    <!-- <footer>
-      <div class="footer-container">
-        <div class="logo"></div>
-        <nav>
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#testimonios">Casos de éxito</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </nav>
-        <div class="social"></div>
-        <div class="terms"></div>
-      </div>
-    </footer> -->
+      <section class="metodologia section">
+        <div class="container section-content">
+          <h2 class="title">Así te ayudo a transformar tu negocio</h2>
+          <div class="metodologia-content">
+            <div class="metodologia-text">
+              <div class="texto-mobile">
+                <p>
+                  Más de 20 años liderando equipos, optimizando procesos y acompañando el crecimiento de marcas gastronómicas locales e
+                  internacionales.
+                </p>
+                <p>
+                  Hoy pongo esa experiencia al servicio de quienes buscan profesionalizar la gestión, lograr rentabilidad sostenida y construir
+                  equipos comprometidos.
+                </p>
+                <p>Combino estrategia, organización y experiencia real para que cada decisión tenga impacto directo en los resultados.</p>
+              </div>
+              <div class="texto-desktop">
+                <p>
+                  Durante más de 20 años he trabajado en la <b>gestión y operación de negocios gastronómicos</b>, liderando equipos, optimizando
+                  procesos y acompañando el crecimiento de marcas locales e internacionales.
+                </p>
+                <p>
+                  Hoy pongo toda esa experiencia al servicio de emprendedores, dueños y gerentes que buscan <b>profesionalizar la gestión</b> de sus
+                  restaurantes, lograr <b>rentabilidad sostenida</b> y construir <b>equipos comprometidos</b>.
+                </p>
+                <p>
+                  Mi enfoque combina <b>estrategia, organización y experiencia real</b> en el terreno, para que cada decisión tenga impacto directo en
+                  los resultados.
+                </p>
+              </div>
+            </div>
+            <div class="metodologia-right">
+              <div class="metricas-grid">
+                <div class="metrica">
+                  <h3>+29</h3>
+                  <p>años de experiencia</p>
+                </div>
+                <div class="metrica">
+                  <h3>+50</h3>
+                  <p>restaurantes a cargo</p>
+                </div>
+                <div class="metrica">
+                  <h3>+550</h3>
+                  <p>líderes formados</p>
+                </div>
+                <div class="metrica">
+                  <h3>+15</h3>
+                  <p>proyectos implementados</p>
+                </div>
+              </div>
+              <div class="cta metodologia-cta">
+                <a class="btn btn-secondary" href="#cta">Conocer más</a>
+              </div>
+            </div>
+          </div>
 
-    <script src="./js/main.js"></script>
+          <div class="item-grid metodologia-grid">
+            <div class="item card--metodologia">
+              <div class="card-title-image">
+                <img src="./assets/icons/pilar1.svg" alt="" loading="lazy" />
+              </div>
+              <h3>Experiencia real</h3>
+              <p>29 años resolviendo desafíos operativos en gastronomía y retail.</p>
+            </div>
+            <div class="item card--metodologia">
+              <div class="card-title-image">
+                <img src="./assets/icons/pilar2.svg" alt="" loading="lazy" />
+              </div>
+              <h3>Metodología clara</h3>
+              <p>Procesos simples que el equipo adopta y sostiene en el tiempo.</p>
+            </div>
+            <div class="item card--metodologia">
+              <div class="card-title-image">
+                <img src="./assets/icons/pilar3.svg" alt="" loading="lazy" />
+              </div>
+              <h3>Resultados medibles</h3>
+              <p>Menos costos, más eficiencia y mejor experiencia del cliente.</p>
+            </div>
+            <div class="item card--metodologia">
+              <div class="card-title-image">
+                <img src="./assets/icons/pilar4.svg" alt="" loading="lazy" />
+              </div>
+              <h3>Acompañamiento</h3>
+              <p>Te guío en cada etapa del proceso de mejora.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonios" class="testimonios section">
+        <div class="container section-content">
+          <h2 class="title">Casos de éxito y experiencias reales</h2>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-title-image">
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+              </div>
+              <p>La consultoría eGo nos ayudó a implementar delivery propio y reducir costos en un 15%.</p>
+              <p>
+                <b>Susana G.</b><span class="muted"><i> — Gerente de “Sabores de Azúcar”</i></span>
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-title-image">
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+              </div>
+              <p>Definimos precios y servicios, logrando un incremento significativo en la rentabilidad.</p>
+              <p>
+                <b>Antonio D.</b>”<span class="muted"><i> — CEO “Hamburgo Restobar</i></span>
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-title-image">
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+              </div>
+              <p>
+                Gracias a Claudia pasamos de tener caos operativo a una cocina y un salón ordenados. Elevó notoriamente la calidad y velocidad del
+                servicio. Entiende el negocio y se pone la camiseta.
+              </p>
+              <p>
+                <b>Roberto G.</b><span class="muted"><i> — CEO “El Rincón del Chef"</i></span>
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-title-image">
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+                <img src="./assets/icons/gorro.png" alt="" loading="lazy" />
+              </div>
+              <p>
+                Claudia es una profesional de primer nivel. Durante los años que compartimos proyectos demostró liderazgo y compromiso constante con
+                la mejora de procesos.
+              </p>
+              <p>
+                <b>Julio H.</b><span class="muted"><i>— Jefe Zonal de Ventas, Delosi</i></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="contacto section">
+        <div class="container section-content contacto-content">
+          <h2 class="contacto-title">¿Listo para potenciar tu restaurante?</h2>
+          <p class="contacto-subtitle texto-desktop">Transformá la gestión de tu restaurante. Mejorá resultados. Disfrutá tu negocio.</p>
+          <p class="contacto-p texto-mobile">👉 Hablemos y veamos cómo puedo ayudarte</p>
+          <p class="contacto-p texto-desktop">👉 Empecemos por una conversación simple o suscríbete para mantener el contacto</p>
+
+          <div class="contacto-cta">
+            <a href="#">
+              <div class="contacto-cta-wp">
+                <img src="./assets/icons/wp.svg" alt="" loading="lazy" />
+                Conversa <br />
+                conmigo
+              </div>
+            </a>
+            <a href="#">
+              <div class="contacto-cta-social">
+                <img src="./assets/icons/social.svg" alt="" loading="lazy" />
+                Sígueme <br />
+                en redes
+              </div>
+            </a>
+          </div>
+
+          <div class="contacto-email">
+            <p class="contacto-email-title">Deja tu correo para recibir más información</p>
+
+            <div class="contacto-email-form">
+              <label for="email" class="sr-only">Correo electrónico</label>
+              <input type="email" id="email" placeholder="Tu correo electrónico" />
+              <button class="btn-email" type="button">Enviar</button>
+            </div>
+
+            <p class="contacto-email-note">Prometo no enviar spam, sólo información útil para tu negocio</p>
+          </div>
+        </div>
+        <a href="#inicio" class="btn-top" aria-label="Volver arriba" role="button">
+          <img src="./assets/icons/up.svg" alt="" loading="lazy" />
+        </a>
+      </section>
+    </main>
+    <footer class="footer">
+      <h2 class="sr-only">Footer</h2>
+      <div class="container-xl">
+        <div class="footer-container">
+          <div class="footer-main">
+            <div class="footer-logo">
+              <img src="./assets/icons/logo.png" alt="Logo eGo Consultoría" loading="lazy" />
+            </div>
+            <nav>
+              <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#testimonios">Casos de éxito</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+              </ul>
+            </nav>
+            <div class="social">
+              <a href="#" aria-label="WhatsApp"><img src="./assets/icons/wp.svg" alt="" aria-hidden="true" loading="lazy" /></a>
+              <a href="#" aria-label="Instagram"><img src="./assets/icons/ig.svg" alt="" aria-hidden="true" loading="lazy" /></a>
+              <a href="#" aria-label="LinkedIn"><img src="./assets/icons/in.svg" alt="" aria-hidden="true" loading="lazy" /></a>
+            </div>
+          </div>
+          <div class="terms">
+            <span>© 2025 <b>eGo</b> Consultoría ·</span>
+            <span class="text-small">Excelencia en la Gestión Operativa de Restaurantes.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/main.js" defer></script>
   </body>
 </html>

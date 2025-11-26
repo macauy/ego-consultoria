@@ -9,6 +9,7 @@ const openMenu = () => {
   menuBtn.setAttribute("aria-expanded", "true");
   icon.src = "./assets/icons/icon-close.svg";
   panel.hidden = false;
+  panel.setAttribute("aria-hidden", "false");
   overlay.hidden = false;
   firstLink.focus();
   overlay.classList.toggle("show");
@@ -19,6 +20,7 @@ const closeMenu = () => {
   menuBtn.setAttribute("aria-expanded", "false");
   icon.src = "./assets/icons/icon-menu.svg";
   panel.hidden = true;
+  panel.setAttribute("aria-hidden", "true");
   overlay.hidden = true;
   menuBtn.focus();
   overlay.classList.toggle("show");

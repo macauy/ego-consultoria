@@ -3,6 +3,7 @@ const overlay = document.getElementById("overlay");
 const panel = document.getElementById("nav-panel");
 const icon = menuBtn.querySelector("img");
 const firstLink = panel.querySelector("a");
+const navLinks = panel.querySelectorAll("a");
 
 const openMenu = () => {
   menuBtn.setAttribute("aria-label", "Close Menu");
@@ -38,4 +39,12 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && menuBtn.getAttribute("aria-expanded") === "true") {
     closeMenu();
   }
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (menuBtn.getAttribute("aria-expanded") === "true") {
+      closeMenu();
+    }
+  });
 });

@@ -48,3 +48,36 @@ navLinks.forEach((link) => {
     }
   });
 });
+
+// Animaciiones
+const items = document.querySelectorAll(".servicio-item.anim");
+const timelineLine = document.querySelector(".timeline-line");
+
+// Observador para los bloques
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  {
+    threshold: 0.25,
+  }
+);
+
+items.forEach((item) => observer.observe(item));
+
+// Activar animación de la línea cuando aparece el primer item
+const firstItem = items[0];
+const lineObserver = new IntersectionObserver(
+  (entries) => {
+    if (entries[0].isIntersecting) {
+      timelineLine.classList.add("filled");
+    }
+  },
+  { threshold: 0.3 }
+);
+
+lineObserver.observe(firstItem);

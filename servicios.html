@@ -17,7 +17,7 @@
           <div id="nav-panel" class="nav-panel" hidden aria-hidden="true">
             <ul class="nav-list">
               <li><a href="./#inicio">Inicio</a></li>
-              <li><a href="servicios">Servicios</a></li>
+              <li><a href="./servicios.html">Servicios</a></li>
               <li><a href="./#testimonios">Casos de éxito</a></li>
               <li><a href="./#contacto">Contacto</a></li>
             </ul>
@@ -34,18 +34,18 @@
     </header>
     <!-- Overlay -->
     <div class="nav-overlay" id="overlay" hidden></div>
-    <main>
-      <section class="section servicios-timeline">
+    <main">
+      <section id="inicio" class="section servicios-timeline">
         <div class="container">
           <div class="servicios-header">
             <h2 class="title">Servicios de Consultoría</h2>
-            <p class="subtitle">Te ayudo a optimizar los procesos de tu restaurante.</p>
           </div>
 
           <div class="timeline-container">
             <span class="timeline-line"></span>
             <div class="servicios-detail">
-              <article class="servicio-item">
+              <p class="subtitle">Te ayudo a optimizar los procesos de tu restaurante.</p>
+              <article class="servicio-item anim">
                 <span class="dot"></span>
                 <h3>Optimización de Procesos</h3>
                 <p>Optimizamos la operación de tu restaurante desde adentro.</p>
@@ -55,7 +55,11 @@
                   reducen costos ocultos y fortalecen la cultura de excelencia en tu equipo.
                 </p>
               </article>
-              <article class="servicio-item">
+
+              <div class="separador">
+                <p class="dot-separador"></p>
+              </div>
+              <article class="servicio-item anim">
                 <span class="dot"></span>
                 <h3>Desarrollo de Equipos</h3>
                 <p>Potenciamos el talento que hace posible tu negocio.</p>
@@ -65,7 +69,10 @@
                   cultura sólida y duradera.
                 </p>
               </article>
-              <article class="servicio-item">
+              <div class="separador">
+                <p class="dot-separador"></p>
+              </div>
+              <article class="servicio-item anim">
                 <span class="dot"></span>
                 <h3>Expansión y nuevos proyectos</h3>
                 <p>Te acompañamos en cada etapa de tu crecimiento.</p>
@@ -79,7 +86,10 @@
                 </p>
                 <p>Menos improvisación, más certezas para que cada nuevo proyecto empiece funcionando bien desde el día uno.</p>
               </article>
-              <article class="servicio-item">
+              <div class="separador">
+                <p class="dot-separador"></p>
+              </div>
+              <article class="servicio-item anim">
                 <span class="dot"></span>
                 <h3>Gestión de Rentabilidad</h3>
                 <p>Hacemos que tu negocio gane más sin perder calidad.</p>
@@ -97,6 +107,7 @@
           </div>
         </div>
       </section>
+
       <section class="section experiencia texto-desktop">
         <div class="container section-content">
           <h2 class="title">Mi experiencia en la gestión gastronómica</h2>
@@ -249,5 +260,6 @@
       </div>
     </footer>
     <script src="./js/main.js" defer></script>
+    <script src="./js/animations.js" defer></script>
   </body>
 </html>

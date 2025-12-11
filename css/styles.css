@@ -66,7 +66,7 @@
   --shadow-soft: 0 4px 8px rgba(0, 0, 0, 0.12);
   --shadow-hard: 0 1px 4px rgba(0, 0, 0, 0.1);
   --shadow-big: 0 20px 40px rgba(0, 0, 0, 0.15);
-  --shadow-strong: 2 4px 6px rgba(0, 0, 0, 0.25);
+  --shadow-strong: 2px 4px 6px rgba(0, 0, 0, 0.25);
 
   /* Gradients */
   --gradiente1: linear-gradient(180deg, #00e7ed 0%, #00df76 100%);
@@ -149,6 +149,12 @@ li {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+
+@media (min-width: 480px) {
+  .container {
+    width: min(var(--max-width), 100% - 3rem);
+  }
 }
 
 @media (min-width: 768px) {
@@ -929,17 +935,13 @@ header {
 .servicio-item .dot {
   position: absolute;
   left: -3rem;
-  transform: translateX(calc(-50% + 2px)) scale(0.8);
-  width: 2rem;
-  height: 2rem;
+  transform: translateX(calc(-50% + 2px)) scale(0.6);
+  width: 1.6rem;
+  height: 1.6rem;
   border-radius: 50%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   transform-origin: center;
-}
-
-.servicio-item.visible .dot {
-  transform: translateX(calc(-50% + 2px)) scale(1.1);
 }
 
 .servicio-item:nth-child(2) .dot {
@@ -958,6 +960,12 @@ header {
   background: var(--service-4);
 }
 
+@media (min-width: 768px) {
+  .servicio-item .dot {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
 @media (min-width: 1024px) {
   .servicios-header {
     margin-left: 6rem;
@@ -977,6 +985,8 @@ header {
 
   .servicio-item .dot {
     left: -4rem;
+    width: 2rem;
+    height: 2rem;
   }
 }
 
@@ -1396,11 +1406,23 @@ footer a:hover {
 .reveal-card {
   opacity: 0;
   transform: translateY(26px);
-  transition: opacity 0.7s ease, transform 0.7s ease, box-shadow 0.7s ease;
+  transition: opacity 0.1s ease, transform 0.5s ease;
 }
 
 .reveal-card.visible {
   opacity: 1;
   transform: translateY(0);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+.servicio-item.reveal {
+  transform: translateX(20px);
+}
+
+.servicio-item.reveal.visible {
+  transform: translateX(0);
+}
+
+.card.reveal-card.visible:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-big);
 }

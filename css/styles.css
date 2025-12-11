@@ -572,33 +572,20 @@ header {
     height: 100%;
   }
 
-  .hero-cta .btn-secondary {
+  /* .hero-cta .btn-secondary {
     display: inline-flex;
-  }
+  } */
 
   .hero-cta {
     justify-content: flex-start;
   }
 }
-/*
-@media (min-width: 768px) {
-  .hero-grid {
-    display: flex;
-    align-items: stretch;
-  }
 
-  .hero-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .hero-content {
-    display: flex;
-    align-items: center;
+@media (min-width: 1024px) {
+  .hero-cta .btn-secondary {
+    display: inline-flex;
   }
 }
-*/
 
 /* Problemas */
 .problemas {

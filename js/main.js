@@ -49,35 +49,48 @@ navLinks.forEach((link) => {
   });
 });
 
-// Animaciiones
-const items = document.querySelectorAll(".servicio-item.anim");
-const timelineLine = document.querySelector(".timeline-line");
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("social-btn");
+  const popover = document.getElementById("social-popover");
 
-// Observador para los bloques
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  {
-    threshold: 0.25,
+  if (!btn || !popover) return;
+
+  function showPopover() {
+    console.log("show");
+    popover.hidden = false;
+    popover.classList.add("show");
+
+    // const rect = btn.getBoundingClientRect();
+    // popover.style.top = rect.bottom + window.scrollY + "px";
+    // popover.style.left = rect.left + "px";
   }
-);
 
-items.forEach((item) => observer.observe(item));
+  function hidePopover() {
+    console.log("hide");
+    popover.classList.remove("show");
+    popover.hidden = true;
+  }
 
-// Activar animación de la línea cuando aparece el primer item
-const firstItem = items[0];
-const lineObserver = new IntersectionObserver(
-  (entries) => {
-    if (entries[0].isIntersecting) {
-      timelineLine.classList.add("filled");
+  // Toggle al hacer click en el botón
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation(); // evita que se cierre inmediatamente
+
+    const isVisible = popover.classList.contains("show");
+
+    if (isVisible) {
+      hidePopover();
+    } else {
+      showPopover();
     }
-  },
-  { threshold: 0.3 }
-);
+  });
 
-lineObserver.observe(firstItem);
+  // Cerrar al hacer click afuera
+  document.addEventListener("click", (e) => {
+    if (!popover.contains(e.target) && !btn.contains(e.target)) {
+      hidePopover();
+    }
+  });
+
+  // Evitar que clicks dentro del popover lo cierren
+  popover.addEventListener("click", (e) => e.stopPropagation());
+});

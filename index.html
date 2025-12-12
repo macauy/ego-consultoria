@@ -200,7 +200,7 @@
                 </div>
               </div>
               <div class="cta metodologia-cta">
-                <a class="btn btn-secondary" href="/servicios.html">Conocer más</a>
+                <a class="btn btn-secondary" href="servicios.html">Conocer más</a>
               </div>
             </div>
           </div>
@@ -383,13 +383,14 @@
           </div>
           <div class="contacto-email">
             <p class="contacto-email-title">Deja tu correo para recibir más información</p>
-
             <div class="contacto-email-form">
-              <label for="email" class="sr-only">Correo electrónico</label>
-              <input type="email" id="email" placeholder="Tu correo electrónico" />
-              <button class="btn-email" type="button">Enviar</button>
+              <form id="email-form" action="https://formspree.io/f/xwpgaykn" method="POST" class="contacto-email-form">
+                <label for="email" class="sr-only">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required />
+                <button class="btn-email" type="submit">Enviar</button>
+              </form>
             </div>
-
+            <p id="email-status" class="contacto-email-note"></p>
             <p class="contacto-email-note">Prometo no enviar spam, sólo información útil para tu negocio</p>
           </div>
         </div>

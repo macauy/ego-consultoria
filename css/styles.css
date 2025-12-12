@@ -1153,8 +1153,9 @@ header {
 
 .contacto-email-form {
   display: flex;
-  gap: 0.5rem;
   justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .contacto-email-form input {

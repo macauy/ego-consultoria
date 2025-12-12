@@ -50,47 +50,66 @@ navLinks.forEach((link) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Popover
   const btn = document.getElementById("social-btn");
   const popover = document.getElementById("social-popover");
 
-  if (!btn || !popover) return;
+  if (btn && popover) {
+    function showPopover() {
+      popover.hidden = false;
+      popover.classList.add("show");
+    }
 
-  function showPopover() {
-    console.log("show");
-    popover.hidden = false;
-    popover.classList.add("show");
+    function hidePopover() {
+      popover.classList.remove("show");
+      popover.hidden = true;
+    }
 
-    // const rect = btn.getBoundingClientRect();
-    // popover.style.top = rect.bottom + window.scrollY + "px";
-    // popover.style.left = rect.left + "px";
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isVisible = popover.classList.contains("show");
+      isVisible ? hidePopover() : showPopover();
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!popover.contains(e.target) && !btn.contains(e.target)) hidePopover();
+    });
+
+    popover.addEventListener("click", (e) => e.stopPropagation());
   }
 
-  function hidePopover() {
-    console.log("hide");
-    popover.classList.remove("show");
-    popover.hidden = true;
+  //  EMAIL FORM (Formspree)
+
+  const form = document.getElementById("email-form");
+  const status = document.getElementById("email-status");
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { Accept: "application/json" },
+      })
+        .then((response) => {
+          if (response.ok) {
+            status.textContent = "¡Gracias! Te escribiré pronto 🙌";
+            status.style.color = "green";
+            form.reset();
+          } else {
+            response.json().then((data) => {
+              status.textContent = data.error || "Hubo un error al enviar. Inténtalo nuevamente.";
+              status.style.color = "red";
+            });
+          }
+        })
+        .catch(() => {
+          status.textContent = "Error de conexión. Inténtalo más tarde.";
+          status.style.color = "red";
+        });
+    });
   }
-
-  // Toggle al hacer click en el botón
-  btn.addEventListener("click", (e) => {
-    e.stopPropagation(); // evita que se cierre inmediatamente
-
-    const isVisible = popover.classList.contains("show");
-
-    if (isVisible) {
-      hidePopover();
-    } else {
-      showPopover();
-    }
-  });
-
-  // Cerrar al hacer click afuera
-  document.addEventListener("click", (e) => {
-    if (!popover.contains(e.target) && !btn.contains(e.target)) {
-      hidePopover();
-    }
-  });
-
-  // Evitar que clicks dentro del popover lo cierren
-  popover.addEventListener("click", (e) => e.stopPropagation());
 });

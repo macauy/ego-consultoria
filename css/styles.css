@@ -1174,7 +1174,7 @@ header {
   top: 10%;
   left: 110%;
   background: var(--color-bg-light);
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-big);
   display: flex;
@@ -1233,19 +1233,11 @@ header {
 }
 
 /* Mobile – centrado automático si hace overflow */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .popover {
-    left: 50% !important;
+    left: -50%;
+    top: 80%;
     transform: translate(-50%, 10px);
-  }
-}
-
-/* Mobile – centra y evita overflow */
-@media (max-width: 480px) {
-  .popover {
-    left: 50% !important;
-    transform: translate(-50%, 8px);
-    width: max-content;
   }
 }
 

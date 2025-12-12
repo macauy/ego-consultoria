@@ -892,6 +892,27 @@ header {
 }
 .servicio-item p {
   margin-block: 1rem;
+  /* font-size: 14px; */
+}
+
+.serv-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+
+  /* Icono circular premium */
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background: var(--verde); /* tu verde corporativo */
+  color: white;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .servicio-item {
